@@ -3,6 +3,14 @@
 	margin: 2%;
 }
 
+#WorkerSection
+{
+	padding: 50px;
+	padding-top: 5px;
+	text-align: center;
+	background: linear-gradient(to top, #2C604F, #06281D);
+}
+
 #HospitalIllustration {
 	width: 20%;
 	margin: 2%;
@@ -20,6 +28,25 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.DoctorsRectangle {
+	width: calc(17% - 40px);
+	height: 20vw;
+	margin: 20px;
+	padding: 5px;
+	
+	border: 5px solid #17C18E;
+	
+	box-sizing: border-box;
+	text-align: center;
+	
+	display: flex;
+	flex-direction: column; 
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	color: #A8FFE3;
 }
 
 .Card {
