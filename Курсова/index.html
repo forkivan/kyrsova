@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Курсова</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<img src="MainIcon.png" alt="Logo icon"> 
+				<li><a class="ArrowButton" href="#home">Головна</a></li>
+				<li><a class="ArrowButton" href="#news">Новини</a></li>
+				<li><a class="ArrowButton" href="#services">Послуги</a></li>
+				<li><a class="ArrowButton" href="#contact">Зв'язок з нами</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+		<div id="MainLogo">
+			<h1 id="TextMainLogo">Achillelius</h1>
+			<h2>Українська національна клінічна лікарня</h2>
+		</div>
+	</section>
+	
+	<section>
+		<div id="CardBlock">
+			<div class="Card">
+				<img src="CardIcon1.png" class="CardIcon" alt="Testing icon">
+				<h2 class = "CardTitle">Записатись на прийом</h2> 
+				<p class = "CardText">Broaden the creative horizons of your kids</p>
+			</div>
+			<div class="Card">
+				<img src="CardIcon2.png" class="CardIcon" alt="Testing icon">
+				<h2 class = "CardTitle">Онлайн консультація</h2> 
+				<p class = "CardText">Broaden the creative horizons of your kids</p>
+			</div>
+			<div class="Card">
+				<img src="CardIcon3.png" class="CardIcon" alt="Testing icon">
+				<h2 class = "CardTitle">Найкращі фахівці в країні</h2> 
+				<p class = "CardText">Broaden the creative horizons of your kids</p>
+			</div>
+			<div class="Card">
+				<img src="CardIcon4.png" class="CardIcon" alt="Testing icon">
+				<h2 class = "CardTitle">Дешеві послуги</h2> 
+				<p class = "CardText">Broaden the creative horizons of your kids</p>
+			</div>
+			<div class="Card">
+				<img src="CardIcon5.png" class="CardIcon" alt="Testing icon">
+				<h2 class = "CardTitle">Підтримка відомих заходів</h2> 
+				<p class = "CardText">Broaden the creative horizons of your kids</p>
+			</div>
+		</div>
+	</section>
+	
+</body>
+</html>
+
+<style>
+
+#CardBlock {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.Card {
+	width: calc(15% - 40px);
+	height: 20vw;
+	margin: 20px;
+	padding: 20px;
+	
+	background-color: #17C18E;
+	
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 15px;
+	
+	display: flex;
+	flex-direction: column; 
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+#MainLogo {
+	background-image: url('MainPageBackground.jpg');
+	width: 100%;
+	height: 27vw;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#TextMainLogo {
+	font-size: 60px;
+	padding-top: 5%;
+}
+
+body {
+	margin: 0;
+	margin-top: 2%;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	border-bottom: 4px solid #3E73A8;
+	background-color: #FFFFFF;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+nav ul img {
+	height: 4vh;
+	margin: 5px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	padding-right: 15%;
+}
+
+nav ul li {
+	float: right;
+}
+
+.ArrowButton {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	
+	color: #050505;
+	text-decoration: none;
+	font-size: 20px;
+	-webkit-transition: all 0.5s ease;
+}
+
+.ArrowButton:hover {
+	background-color: #E0EFFF;
+}
+</style>
