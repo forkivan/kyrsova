@@ -26,7 +26,7 @@
 	</section>
 	
 	<section>
-		<div id="CardBlock">
+		<div class="CardBlock">
 			<div class="Card">
 				<img src="CardIcon1.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Записатись на прийом</h2> 
@@ -55,12 +55,30 @@
 		</div>
 	</section>
 	
+	<section class="CardBlock">
+		<div id="AboutUs">
+			<h1 class="GreenHeader">Про лікарню</h1>
+			<p>Комунальне некомерційне підприємство «Вінницька обласна клінічна лікарня ім. М. І. Пирогова Вінницької обласної Ради» є багатопрофільною високоспеціалізованою, лікувально-профілактичною установою охорони здоров’я, повноваженнями якої є надання медичної допомоги на третинному рівні. Головна місія КНП «ВОКЛ ім. М. І. Пирогова ВОР» – якість та доступність в наданні медичної допомоги».</p>
+		</div>
+	</section>
+	
 </body>
 </html>
 
 <style>
 
-#CardBlock {
+#AboutUs {
+	width: 40%;
+}
+
+.GreenHeader {
+	font-size: 40px;
+	padding-bottom: 10px;
+	color: #17C18E;
+	border-bottom: 3px solid #17C18E;
+}
+
+.CardBlock {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
