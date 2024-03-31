@@ -212,7 +212,9 @@ nav ul {
 }
 
 #EndLinks {
-	width: 80%;
+	width: 100%;
+	padding: 5px 20%;
+	background-color: #032114;
 	
 	a { 
 		float: right; 
@@ -220,7 +222,7 @@ nav ul {
 		
 		display: block;
 		text-align: center;
-		padding: 12px 14px;
+		padding: 1.5% 14px;
 		text-decoration: none;
 		font-size: 15px;
 	}
@@ -236,7 +238,7 @@ nav ul {
 		width: 16%;
 		padding: 10px;
 	}
-	#EndLinks { width: 90%; }
+	#EndLinks { padding: 1.5% 10%; }
 	
 	.LinkBlock { 
 		width:25%; 
@@ -253,7 +255,7 @@ nav ul {
 		padding: 15px;
 	}
 	
-	#EndLinks { width: 100%; }
+	#EndLinks { padding: 1.5% 0; }
 	
 	.LinkBlock { 
 		width:32%; 
@@ -282,5 +284,5 @@ nav ul {
 		margin: 3%; 
 	}
 	
-	#EndLinks { width: 100%; }
+	#EndLinks { padding: 1.5% 0; }
 }
