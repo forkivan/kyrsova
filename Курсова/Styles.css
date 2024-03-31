@@ -23,10 +23,11 @@ nav ul {
 	padding-right: 15%;
 	
 	li { float: right; }
-	img {
-		height: 4vh;
-		margin: 5px;
-	}
+}
+
+#LogoHospital {
+	height: 4vh;
+	margin: 5px;
 }
 
 .ButtonMoreInformation {
@@ -194,12 +195,52 @@ nav ul {
 
 
 
+#LinkSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #06281D;
+}
+
+.LinkBlock {
+	width:20%;
+	margin: 2%;
+	color: #7CA597;
+	
+	ul li { margin:3%; }
+	ul li a { text-decoration: none; color: #7CA597; }
+}
+
+#EndLinks {
+	width: 80%;
+	
+	a { 
+		float: right; 
+		color: #7CA597;
+		
+		display: block;
+		text-align: center;
+		padding: 12px 14px;
+		text-decoration: none;
+		font-size: 15px;
+	}
+}
+
+
+
+
 
 @media(min-width:1001px) and (max-width:1500px) {
 	#HospitalIllustration { width: 35%; }
 	.Card {
 		width: 16%;
 		padding: 10px;
+	}
+	#EndLinks { width: 90%; }
+	
+	.LinkBlock { 
+		width:25%; 
+		margin: 1%; 
 	}
 }
 
@@ -210,6 +251,13 @@ nav ul {
 	.Card {
 		width: 25%; 
 		padding: 15px;
+	}
+	
+	#EndLinks { width: 100%; }
+	
+	.LinkBlock { 
+		width:32%; 
+		margin: 5px; 
 	}
 }
 
@@ -225,8 +273,14 @@ nav ul {
 	nav ul {
 		padding: 0;
 		li { float: left; }
-		img {
-			margin: 5px 30%;
-		}
 	}
+	
+	#LogoHospital { margin: 5px 30%; }
+	
+	.LinkBlock { 
+		width:94%; 
+		margin: 3%; 
+	}
+	
+	#EndLinks { width: 100%; }
 }
