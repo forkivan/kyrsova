@@ -1,0 +1,16 @@
+#ServicesSection {
+	margin-top: 5%;
+	padding: 0 10%;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	border: 1px solid #85C6A9;
+	text-align: left;
+	padding: 8px;
+}
+th {
+	background-color: #D2f2E2;
+}

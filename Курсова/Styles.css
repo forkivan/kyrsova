@@ -5,7 +5,7 @@ body {
 }
 
 header {
-	border-bottom: 4px solid #3E73A8;
+	border-bottom: 4px solid #06683D;
 	background-color: #FFFFFF;
 	position: fixed;
 	width: 100%;
@@ -84,6 +84,11 @@ nav ul {
 	border-bottom: 3px solid #17C18E;
 }
 
+.MiniGreenHeader {
+	font-size: 30px;
+	color: #3F9E81;
+}
+
 .CardBlock {
 	display: flex;
 	flex-wrap: wrap;
@@ -94,7 +99,7 @@ nav ul {
 
 
 .Card {
-	width: 13%;
+	width: 17%;
 	margin: 0.9%;
 	padding: 18px;
 	
@@ -235,7 +240,7 @@ nav ul {
 @media(min-width:1001px) and (max-width:1500px) {
 	#HospitalIllustration { width: 35%; }
 	.Card {
-		width: 16%;
+		width: 25%;
 		padding: 10px;
 	}
 	#EndLinks { padding: 1.5% 10%; }
@@ -251,7 +256,7 @@ nav ul {
 	#AboutUs { width:35%; }
 	
 	.Card {
-		width: 25%; 
+		width: 30%; 
 		padding: 15px;
 	}
 	
