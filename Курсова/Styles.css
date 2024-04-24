@@ -161,7 +161,7 @@ transform: scale(1.02);
 }
 
 .DoctorsRectangle {
-	width: calc(30vh - 40px);
+	width: calc(5vw + 15vh);
 	
 	margin: 1%;
 	padding-top: 0;
@@ -259,6 +259,14 @@ transform: scale(1.02);
 	}
 	#EndLinks { padding: 1.5% 10%; }
 	
+	.DoctorsRectangle {
+		width: calc(10vw + 10vh);
+		
+		.ButtonMoreInformation {
+			margin: 20px;
+		}
+	}
+	
 	.LinkBlock { 
 		width:25%; 
 		margin: 1%; 
@@ -268,6 +276,14 @@ transform: scale(1.02);
 @media(min-width:641px) and (max-width:1000px) {
     #HospitalIllustration { width: 55%; }
 	#AboutUs { width:35%; }
+	
+	.DoctorsRectangle {
+		width: calc(15vw + 10vh);
+		
+		.ButtonMoreInformation {
+			margin: 20px 5px;
+		}
+	}
 	
 	.Card {
 		width: 30%; 
@@ -287,6 +303,14 @@ transform: scale(1.02);
 	.Card {
 		width: 45%; 
 		padding: 15px;
+	}
+	
+	.DoctorsRectangle {
+		width: 45%;
+		
+		.ButtonMoreInformation {
+			margin: 20px 10px;
+		}
 	}
 	
 	#AboutUs { width:90%; }
