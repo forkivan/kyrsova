@@ -10,6 +10,7 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	Z-index: 5;
 }
 
 
@@ -119,7 +120,13 @@ nav ul {
 	
 }
 
-.Card:hover { background-color: #129E74; }
+.Card:hover { 
+
+background-color: #129E74; 
+transform: translateX(7px) translateY(7px);
+box-shadow: 0px 0px #DFDFDF;
+
+}
 
 #AboutUs {
 	width: 30%;
@@ -130,6 +137,13 @@ nav ul {
 	width: 20%;
 	margin: 2%;
 	border: 4px solid #17C18E;
+	transition: all 0.3s ease;
+}
+
+#HospitalIllustration:hover {
+
+transform: scale(1.02);
+
 }
 
 
@@ -195,7 +209,7 @@ nav ul {
 	transition: all 0.3s ease;
 }
 
-#ButtonSearchDoctor:hover { transform: scale(1.1); }
+#ButtonSearchDoctor:hover { transform: scale(1.05); }
 
 
 
