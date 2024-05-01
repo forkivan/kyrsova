@@ -63,20 +63,7 @@ nav ul {
 
 
 
-#MainLogo {
-	background-image: url('Images/MainPageBackground.jpg');
-	width: 100%;
-	height: 27vw;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	color: #FFFFFF;
-	
-	h1 {
-		font-size: 60px;
-		padding-top: 5%;
-	}
-}
+
 
 .GreenHeader {
 	font-size: 40px;
@@ -90,126 +77,18 @@ nav ul {
 	color: #3F9E81;
 }
 
-.CardBlock {
+.BlockForContent {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.CardIcon { margin: 0.5% 30%; }
-
-
-.Card {
-	width: 17%;
-	margin: 0.9%;
-	padding: 18px;
-	
-	background-color: #17C18E;
-	box-shadow: 7px 7px #DFDFDF;
-	
-	box-sizing: border-box;
-	text-align: center;
-	border-radius: 15px;
-	
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	color: #FFFFFF;
-	transition: all 0.3s ease;
-	
-}
-
-.Card:hover { 
-
-background-color: #129E74; 
-transform: translateX(7px) translateY(7px);
-box-shadow: 0px 0px #DFDFDF;
-
-}
-
-#AboutUs {
-	width: 30%;
-	margin: 2%;
-}
-
-#HospitalIllustration {
-	width: 20%;
-	margin: 2%;
-	border: 4px solid #17C18E;
-	transition: all 0.3s ease;
-}
-
-#HospitalIllustration:hover {
-
-transform: scale(1.02);
-
-}
 
 
 
 
-#WorkerSection {
-	padding: 50px;
-	padding-top: 5px;
-	text-align: center;
-	background: linear-gradient(to top, #2C604F, #06281D);
-	
-	.GreenHeader {
-		color: #00DB99;
-	}
-}
 
-.DoctorsRectangle {
-	width: calc(5vw + 15vh);
-	
-	margin: 1%;
-	padding-top: 0;
-	
-	border: 5px solid #17C18E;
-	
-	box-sizing: border-box;
-	text-align: center;
-	
-	display: flex;
-	flex-direction: column; 
-	flex-wrap: wrap;
-	justify-content: top;
-	align-items: center;
-	color: #A8FFE3;
-	transition: all 0.3s ease;
-	
-	.ButtonMoreInformation {
-		background: none; 
-		border: 5px solid #17C18E;
-		margin: 20px;
-	}
-}
 
-.DoctorsRectangle:hover { transform: translateY(-15px); }
-
-.PersonIcon {
-	float: inline-start;
-	width: 100%;
-}
-
-#ButtonSearchDoctor {
-	background: none; 
-	color: #fff; 
-	border: 5px solid #17C18E;
-	border-radius: 10px; 
-	cursor: pointer;
-	
-	font-size: 30px;
-	font-weight: bold;
-	font-family: arial;
-	
-	padding: 10px 60px;
-	margin: 20px;
-	transition: all 0.3s ease;
-}
-
-#ButtonSearchDoctor:hover { transform: scale(1.05); }
 
 
 
@@ -252,20 +131,7 @@ transform: scale(1.02);
 
 
 @media(min-width:1001px) and (max-width:1500px) {
-	#HospitalIllustration { width: 35%; }
-	.Card {
-		width: 25%;
-		padding: 10px;
-	}
 	#EndLinks { padding: 1.5% 10%; }
-	
-	.DoctorsRectangle {
-		width: calc(10vw + 10vh);
-		
-		.ButtonMoreInformation {
-			margin: 20px;
-		}
-	}
 	
 	.LinkBlock { 
 		width:25%; 
@@ -274,22 +140,6 @@ transform: scale(1.02);
 }
 
 @media(min-width:641px) and (max-width:1000px) {
-    #HospitalIllustration { width: 55%; }
-	#AboutUs { width:35%; }
-	
-	.DoctorsRectangle {
-		width: calc(15vw + 10vh);
-		
-		.ButtonMoreInformation {
-			margin: 20px 5px;
-		}
-	}
-	
-	.Card {
-		width: 30%; 
-		padding: 15px;
-	}
-	
 	#EndLinks { padding: 1.5% 0; }
 	
 	.LinkBlock { 
@@ -299,22 +149,6 @@ transform: scale(1.02);
 }
 
 @media(max-width:640px) {
-	#HospitalIllustration { width: 90%; }
-	.Card {
-		width: 45%; 
-		padding: 15px;
-	}
-	
-	.DoctorsRectangle {
-		width: 45%;
-		
-		.ButtonMoreInformation {
-			margin: 20px 10px;
-		}
-	}
-	
-	#AboutUs { width:90%; }
-	
 	nav ul {
 		padding: 0;
 		li { float: left; }

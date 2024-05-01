@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Курсова</title>
+	<title>Achillelius - Українська національна клінічна лікарня</title>
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
 				<img src="Images/MainIcon.png" id="LogoHospital" alt="Logo icon"> 
-				<li><a class="ArrowButton" href="#home">Головна</a></li>
+				<li><a class="ArrowButton" href="index.html">Головна</a></li>
 				<li><a class="ArrowButton" href="#news">Новини</a></li>
-				<li><a class="ArrowButton" href="#services">Послуги</a></li>
+				<li><a class="ArrowButton" href="services.html">Послуги</a></li>
 				<li><a class="ArrowButton" href="#contact">Зв'язок з нами</a></li>
 			</ul>
 		</nav>
@@ -26,7 +26,7 @@
 	</section>
 	
 	<section>
-		<div class="CardBlock">
+		<div class="BlockForContent">
 			<div class="Card">
 				<img src="Images/CardIcon1.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Записатись на прийом</h2> 
@@ -60,20 +60,20 @@
 		</div>
 	</section>
 	
-	<section class="CardBlock">
+	<section class="BlockForContent">
 		<div id="AboutUs">
 			<h1 class="GreenHeader">Про лікарню</h1>
 			<p>
 				Комунальне некомерційне підприємство "Achillelius, Українська національна клінічна лікарня" є передовою багатопрофільною медичною установою, призначеною для надання високоспеціалізованої медичної допомоги на третинному рівні. Головна місія нашої клініки полягає в забезпеченні якості та доступності медичних послуг для всіх наших пацієнтів. Наша команда медичних фахівців працює наполегливо, щоб забезпечити оптимальні умови лікування та відновлення здоров'я кожного пацієнта. Відкриваючи двері нашої лікарні, ми зобов'язані забезпечити вам не лише професійну медичну допомогу, але й надійну та затишну атмосферу, де ваше благополуччя є нашим пріоритетом.
 			</p>
-			<button class="ButtonMoreInformation">Детальніше</button>
+			<button class="ButtonMoreInformation" onclick="window.location.href='aboutus.html'">Детальніше</button>
 		</div>
 		<img src="Images/PageIllustration.jpg" id="HospitalIllustration" alt="Hospital illustration">
 	</section>
 	
 	<section id="WorkerSection">
 		<h1 class="GreenHeader">Лікарі</h1>
-		<div class="CardBlock">
+		<div class="BlockForContent">
 			<div class="DoctorsRectangle">
 				<img src="Images/DemoWomenPerson1.jpg" class="PersonIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Олександра Михайлівна Петренко</h2> 
@@ -93,7 +93,7 @@
 				<button class="ButtonMoreInformation">Детальніше</button>
 			</div>
 		</div>
-		<button id="ButtonSearchDoctor">Шукати лікаря</button>
+		<button id="ButtonSearchDoctor" onclick="window.location.href='alldoctors.html'">Шукати лікаря</button>
 	</section>
 	
 	<section id="LinkSection">
@@ -152,3 +152,5 @@
 </html>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="main_page_styles.css">
+<link rel="stylesheet" href="doctor_styles.css">
