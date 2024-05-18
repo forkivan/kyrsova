@@ -10,7 +10,7 @@ checkGuest();
 <body>
 
 <form class="card" action="src/actions/register.php" method="post" enctype="multipart/form-data">
-    <h2>Реєстрація</h2>
+    <h2 class="ForHeader">Реєстрація</h2>
 
     <label for="name">
         Ім`я

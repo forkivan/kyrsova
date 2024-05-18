@@ -10,7 +10,7 @@ checkGuest();
 <body>
 
 <form class="card" action="src/actions/login.php" method="post">
-    <h2>Вхід</h2>
+    <h2 class="ForHeader">Вхід</h2>
 
     <?php if(hasMessage('error')): ?>
         <div class="notice error"><?php echo getMessage('error') ?></div>
