@@ -49,7 +49,7 @@ checkAuth();
 
     <form class="doctor" action="doctor.php" method="post">
         <h3 class="ForHeader">Гастроентеролог</h3>
-        <p class="ForForP">Лікар, який спеціалізується на захворюваннях шлунково-кишкового тракту.</p>
+        <p class="ForP">Лікар, який спеціалізується на захворюваннях шлунково-кишкового тракту.</p>
         <input type="text" id="id" name="id" value="6" hidden>
         <button type="submit">Вибрати</button>
     </form>
