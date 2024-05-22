@@ -87,7 +87,7 @@
 		<button id="ButtonSearchDoctor" onclick="window.location.href='alldoctors.php'">Шукати лікаря</button>
 	</section>
 	
-	 
+	<?php include 'footer.php'; ?>
 </body>
 </html>
 
