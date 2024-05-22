@@ -89,6 +89,7 @@ if($id == 20){
     
     <div class="doctor">
         <h3 class="ForHeader">Педіатр</h3>
+        <input type="hidden" id="scheduleId" value="<?php echo $id?>">
         <div class="schedule">
             <div class="header"> 
                 <div class="day">Понеділок</div>
@@ -98,53 +99,12 @@ if($id == 20){
                 <div class="day">П'ятниця</div>
                 <div class="day">Субота</div>
             </div>
-            <div class="times">
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
-                <div class="column">
-                    <div class="time">12:00</div>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
-                </div>
+            <div class="times" id="times">
+            <!-- Ці елементи будуть заповнені динамічно за допомогою JavaScript -->
             </div>
         </div>
     </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

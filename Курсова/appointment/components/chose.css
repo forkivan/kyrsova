@@ -87,3 +87,10 @@ body {
     text-align: center;
     border-radius: 5px;
 }
+
+.green {
+    background-color: rgba(0, 128, 0, 0.568);
+}
+.red {
+    background-color: rgba(255, 0, 0, 0.774);
+}

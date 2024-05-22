@@ -70,6 +70,14 @@ function getPDO(): PDO
     }
 }
 
+function getSchedule(int $id)
+{   
+    $pdo = getPDO();
+    $stmt = $pdo->prepare("SELECT Mon1, Mon2, Mon3, Mon4, Mon5 FROM likar WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+}
+
 function findUser(string $email)
 {
     $pdo = getPDO();
