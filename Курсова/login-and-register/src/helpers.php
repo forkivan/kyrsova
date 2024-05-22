@@ -79,6 +79,23 @@ function findUser(string $email): array|bool
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
+function findSpecialty(int $id): array|bool
+{
+    $pdo = getPDO();
+
+    $stmt = $pdo->prepare("SELECT specialty FROM likar WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+}
+
+function findName(int $id): array|bool
+{
+    $pdo = getPDO();
+
+    $stmt = $pdo->prepare("SELECT name FROM likar WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+}
 
 function currentUser(): array|false
 {

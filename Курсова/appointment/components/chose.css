@@ -54,4 +54,36 @@ body {
     max-width: 600px;
 }
 
+.schedule {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
 
+.header {
+    display: contents;
+}
+
+.day {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.times {
+    display: contents;
+}
+
+.column {
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+}
+
+.time {
+    background-color: #ccc;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}

@@ -4,6 +4,8 @@ require_once __DIR__ . '/../login-and-register/src/helpers.php';
 checkAuth();
 
 $id = $_POST['id'] ?? null;
+$specialty = findSpecialty($id);
+$name = findName($id);
 
 if($id == 1){
     $picture = 'img/Doctor1.png';
@@ -81,14 +83,67 @@ if($id == 20){
         <div class="picture_block">
             <?php echo '<img class="image" src="'.$picture.'">';?>
         </div>
-        <h3 class="ForHeader">Терапевт</h3>
+        <h3 class="ForHeader"><?php echo $specialty['specialty']?></h3>
+        <h3 class="ForHeader"><?php echo $name['name']?></h3>
     </div>
     
     <div class="doctor">
         <h3 class="ForHeader">Педіатр</h3>
-        <p class="ForP">Лікар, який спеціалізується на лікуванні дітей.</p>
+        <div class="schedule">
+            <div class="header"> 
+                <div class="day">Понеділок</div>
+                <div class="day">Вівторок</div>
+                <div class="day">Середа</div>
+                <div class="day">Четвер</div>
+                <div class="day">П'ятниця</div>
+                <div class="day">Субота</div>
+            </div>
+            <div class="times">
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="column">
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
 
 
