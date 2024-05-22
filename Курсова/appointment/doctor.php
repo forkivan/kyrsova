@@ -146,7 +146,5 @@ if($id == 20){
     </div>
 </div>
 
-
-<?php include_once __DIR__ . '/components/scripts.php' ?>
 </body>
 </html>

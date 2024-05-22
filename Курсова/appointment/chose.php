@@ -154,7 +154,5 @@ checkAuth();
 
 </div>
 
-
-<?php include_once __DIR__ . '/components/scripts.php' ?>
 </body>
 </html>

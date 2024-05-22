@@ -70,7 +70,7 @@ function getPDO(): PDO
     }
 }
 
-function findUser(string $email): array|bool
+function findUser(string $email)
 {
     $pdo = getPDO();
 
@@ -79,7 +79,7 @@ function findUser(string $email): array|bool
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
-function findSpecialty(int $id): array|bool
+function findSpecialty(int $id)
 {
     $pdo = getPDO();
 
@@ -88,7 +88,7 @@ function findSpecialty(int $id): array|bool
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
-function findName(int $id): array|bool
+function findName(int $id)
 {
     $pdo = getPDO();
 
@@ -97,7 +97,7 @@ function findName(int $id): array|bool
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
-function currentUser(): array|false
+function currentUser()
 {
     $pdo = getPDO();
 
