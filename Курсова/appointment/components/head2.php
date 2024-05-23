@@ -4,6 +4,6 @@
     <link rel="stylesheet" href="../login-and-register/assets/pico.classless.jade.css">
     <link rel="stylesheet" href="components/chose.css">
 	
-	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../styles.css">
 	<?php include __DIR__ . '/../../header.php'; ?>
 </head>

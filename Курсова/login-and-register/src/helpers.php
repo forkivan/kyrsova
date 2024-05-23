@@ -78,6 +78,13 @@ function getSchedule(int $id)
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
+function updateSchedule(int $id, string $dayTime)
+{
+    $pdo = getPDO();
+    $stmt = $pdo->prepare("UPDATE likar SET $dayTime = 1 WHERE id = :id");
+    return $stmt->execute(['id' => $id]);
+}
+
 function findUser(string $email)
 {
     $pdo = getPDO();

@@ -16,10 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     const timeValue = data[`${day}${index + 1}`]; // Отримуємо значення часу з бази даних для відповідного дня
                     if (timeValue === null) {
                         timeDiv.classList.add("green");
+                        const link = document.createElement("a");
+                        link.href = `confirm.php?id=${id}&dayTime=${day}${index + 1}`;
+                        link.style.display = 'block'; // Додаємо стиль для обгортки
+                        link.style.height = '100%'; // Встановлюємо висоту для обгортки
+                        link.appendChild(document.createTextNode(hour));
+                        timeDiv.appendChild(link);
                     } else {
                         timeDiv.classList.add("red");
+                        timeDiv.textContent = hour;
                     }
-                    timeDiv.textContent = hour; // Встановлюємо відповідний час
                     column.appendChild(timeDiv);
                 });
                 times.appendChild(column);

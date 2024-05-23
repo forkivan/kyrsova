@@ -7,7 +7,7 @@
 				<li><a class="ArrowButton" href='\kyrsova\Курсова\index.php'>Головна</a></li>
 				<li><a class="ArrowButton" href="#news">Новини</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Послуги</a></li>
-				<li><a class="ArrowButton" href="#contact">Запис до лікаря</a></li>
+				<li><a class="ArrowButton" href="appointment/chose.php">Запис до лікаря</a></li>
 			</ul>
 		</nav>
 	</header>
