@@ -108,7 +108,7 @@ header {
 	width:20%;
 	margin: 2%;
 	color: #7CA597;
-	
+	p, ul {color: #7CA597;}
 	ul li { margin:3%; }
 	ul li a { text-decoration: none; color: #7CA597; }
 }

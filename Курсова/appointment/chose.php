@@ -160,8 +160,7 @@ checkAuth();
 
 </div>
 
-<button >Назад</button>
-
+<?php include __DIR__ . '/../footer.php'; ?>
 
 </body>
 </html>

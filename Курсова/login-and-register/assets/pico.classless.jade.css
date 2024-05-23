@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Pico CSS ✨ v2.0.6 (https://picocss.com)
- * Copyright 2019-2024 - Licensed under MIT header
+ * Copyright 2019-2024 - Licensed under MIT 
  */
 /**
  * Styles
@@ -578,41 +578,31 @@ main {
 }
 
 body > main,
-body > footer {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
-}
+
 @media (min-width: 576px) {
-  body > main,
-  body > footer {
+  body > main {
     max-width: 510px;
     padding-right: 0;
     padding-left: 0;
   }
 }
 @media (min-width: 768px) {
-  body > main,
-  body > footer {
+  body > main {
     max-width: 700px;
   }
 }
 @media (min-width: 1024px) {
-  body > main,
-  body > footer {
+  body > main {
     max-width: 950px;
   }
 }
 @media (min-width: 1280px) {
-  body > main,
-  body > footer {
+  body > main {
     max-width: 1200px;
   }
 }
 @media (min-width: 1536px) {
-  body > main,
-  body > footer {
+  body > main {
     max-width: 1450px;
   }
 }
@@ -749,10 +739,6 @@ blockquote {
   border-left: 0.25rem solid var(--pico-blockquote-border-color);
   border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
   border-inline-end: none;
-}
-blockquote footer {
-  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.5);
-  color: var(--pico-blockquote-footer-color);
 }
 
 abbr[title] {
@@ -1790,19 +1776,6 @@ article {
   background: var(--pico-card-background-color);
   box-shadow: var(--pico-card-box-shadow);
 }
-article > footer {
-  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
-  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
-  padding: calc(var(--pico-block-spacing-vertical) * 0.66) var(--pico-block-spacing-horizontal);
-  background-color: var(--pico-card-sectioning-background-color);
-}
-article > footer {
-  margin-top: var(--pico-block-spacing-vertical);
-  margin-bottom: calc(var(--pico-block-spacing-vertical) * -1);
-  border-top: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-bottom-right-radius: var(--pico-border-radius);
-  border-bottom-left-radius: var(--pico-border-radius);
-}
 
 /**
  * Group ([role="group"], [role="search"])
@@ -2007,17 +1980,6 @@ dialog article {
   dialog article {
     max-width: 700px;
   }
-}
-dialog article > footer {
-  text-align: right;
-}
-dialog article > footer button,
-dialog article > footer [role=button] {
-  margin-bottom: 0;
-}
-dialog article > footer button:not(:first-of-type),
-dialog article > footer [role=button]:not(:first-of-type) {
-  margin-left: calc(var(--pico-spacing) * 0.5);
 }
 dialog article :is(a, button)[rel=prev] {
   display: block;

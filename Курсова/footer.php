@@ -46,7 +46,7 @@
 		</div>
 		
 		<div id="EndLinks">
-			<img src="Images/MainIcon.png" id="LogoHospital" alt="Logo icon"> 
+			<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
 			<a href="#termsofuse">УМОВИ ВИКОРИСТАННЯ</a>
 			<a href="#policy">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
 			<a href="#contacts">КОНТАКТИ</a>
