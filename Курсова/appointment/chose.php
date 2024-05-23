@@ -7,6 +7,10 @@ checkAuth();
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
 <?php include_once __DIR__ . '/components/head2.php'?>
+
+
+
+
 <body>
 
 
