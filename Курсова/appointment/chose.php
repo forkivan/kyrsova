@@ -9,6 +9,8 @@ checkAuth();
 <?php include_once __DIR__ . '/components/head2.php'?>
 <body>
 
+
+
 <div class="card">
     <h2 class="ForHeader">Виберіть необхідного лікаря</h2>
 
@@ -153,6 +155,9 @@ checkAuth();
     </form>
 
 </div>
+
+<button >Назад</button>
+
 
 </body>
 </html>

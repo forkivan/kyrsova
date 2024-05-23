@@ -84,7 +84,7 @@
 				<button class="ButtonMoreInformation">Детальніше</button>
 			</div>
 		</div>
-		<button id="ButtonSearchDoctor" onclick="window.location.href='alldoctors.php'">Шукати лікаря</button>
+		<button id="ButtonSearchDoctor" onclick="window.location.href='appointment/chose.php'">Шукати лікаря</button>
 	</section>
 	
 	<?php include 'footer.php'; ?>
