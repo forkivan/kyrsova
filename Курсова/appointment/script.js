@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const id = document.getElementById("scheduleId").value; // Отримуємо значення id з прихованого input
-    fetch(`get_schedule.php?id=${id}`)
+    fetch(`components/get_schedule.php?id=${id}`)
         .then(response => response.json())
         .then(data => {
             const times = document.getElementById("times");
