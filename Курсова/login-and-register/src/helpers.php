@@ -73,7 +73,7 @@ function getPDO(): PDO
 function getSchedule(int $id)
 {   
     $pdo = getPDO();
-    $stmt = $pdo->prepare("SELECT Mon1, Mon2, Mon3, Mon4, Mon5 FROM likar WHERE id = :id");
+    $stmt = $pdo->prepare("SELECT Mon1, Mon2, Mon3, Mon4, Mon5, Tue1, Tue2, Tue3, Tue4, Tue5, Wed1, Wed2, Wed3, Wed4, Wed5, Thu1, Thu2, Thu3, Thu4, Thu5, Fri1, Fri2, Fri3, Fri4, Fri5 FROM likar WHERE id = :id");
     $stmt->execute(['id' => $id]);
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }

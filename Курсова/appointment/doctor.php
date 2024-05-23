@@ -97,7 +97,6 @@ if($id == 20){
                 <div class="day">Середа</div>
                 <div class="day">Четвер</div>
                 <div class="day">П'ятниця</div>
-                <div class="day">Субота</div>
             </div>
             <div class="times" id="times">
             <!-- Ці елементи будуть заповнені динамічно за допомогою JavaScript -->
