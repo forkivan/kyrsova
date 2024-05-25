@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .card {
@@ -21,23 +21,15 @@ body {
     background: #141e26;
     border-radius: 0.25rem;
     padding: 40px;
-}
-
-form {
-    min-width: 500px;
-    max-width: 700px;
-}
-
-.home {
+    margin: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    padding: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
 }
-
 
 .ForHeader{
     text-align: center;
     width: 100%;
 }
+
