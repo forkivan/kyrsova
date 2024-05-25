@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-	<!-- <div class="showHeader">
+	<div class="showHeader">
 		<nav>
 			<ul>
 				<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
@@ -11,7 +11,7 @@
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Запис до лікаря</a></li>
 			</ul>
 		</nav>
-	</div> -->
+	</div>
 
 	<div class="hideHeader">
 		<nav>
