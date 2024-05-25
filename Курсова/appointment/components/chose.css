@@ -46,6 +46,11 @@ body {
     margin-right: 1%;
 }
 
+.header {
+    display: contents;
+}
+
+
 .ForP{
     height: 30%;
     text-align: center;
