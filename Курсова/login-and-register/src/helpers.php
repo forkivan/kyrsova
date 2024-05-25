@@ -78,12 +78,59 @@ function getSchedule(int $id)
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
-function updateSchedule(int $id, string $dayTime)
-{
+function addAppointment($userId, $likarId, $date, $time, $dayOfWeek) {
     $pdo = getPDO();
-    $stmt = $pdo->prepare("UPDATE likar SET $dayTime = 1 WHERE id = :id");
-    return $stmt->execute(['id' => $id]);
+
+    $stmt = $pdo->prepare("
+        INSERT INTO appointments (user_id, likar_id, appointment_date, appointment_time, day_of_week) 
+        VALUES (:user_id, :likar_id, :appointment_date, :appointment_time, :day_of_week)
+    ");
+    return $stmt->execute([
+        'user_id' => $userId,
+        'likar_id' => $likarId,
+        'appointment_date' => $date,
+        'appointment_time' => $time,
+        'day_of_week' => $dayOfWeek
+    ]);
 }
+
+function updateSchedule($id, $dayTime, $userId) {
+    $pdo = getPDO();
+
+    $day = substr($dayTime, 0, 3);
+    $timeIndex = substr($dayTime, 3);
+
+    $date = date('Y-m-d'); // Можете оновити логіку для отримання правильної дати
+    $times = ["12:00", "13:00", "14:00", "15:00", "16:00"];
+    $time = isset($times[$timeIndex - 1]) ? $times[$timeIndex - 1] : '';
+
+    try {
+        $pdo->beginTransaction();
+
+        $stmt = $pdo->prepare("UPDATE likar SET ${day}${timeIndex} = 1 WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+
+        $stmt = $pdo->prepare("
+            INSERT INTO appointments (user_id, likar_id, appointment_date, appointment_time, day_of_week) 
+            VALUES (:user_id, :likar_id, :appointment_date, :appointment_time, :day_of_week)
+        ");
+        $stmt->execute([
+            'user_id' => $userId,
+            'likar_id' => $id,
+            'appointment_date' => $date,
+            'appointment_time' => $time,
+            'day_of_week' => $day
+        ]);
+
+        $pdo->commit();
+        return true;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        error_log("Error updating schedule: " . $e->getMessage());
+        return false;
+    }
+}
+
 
 function findUser(string $email)
 {
@@ -143,6 +190,6 @@ function checkAuth(): void
 function checkGuest(): void
 {
     if (isset($_SESSION['user']['id'])) {
-        redirect('/kyrsova/Курсова/login-and-register/home.php');
+        redirect('/kyrsova/Курсова/account/home.php');
     }
 }

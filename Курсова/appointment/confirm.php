@@ -5,6 +5,7 @@ checkAuth();
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 1;
 $dayTime = isset($_GET['dayTime']) ? $_GET['dayTime'] : '';
+$userId = $_SESSION['user']['id'];
 
 // Визначаємо день і час
 $daysMap = [
@@ -30,7 +31,7 @@ $dayName = isset($daysMap[$day]) ? $daysMap[$day] : '';
 <body>
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if ($dayTime && updateSchedule($id, $dayTime)) {           
+        if ($dayTime && updateSchedule($id, $dayTime, $userId)) {           
 ?>
             <div class="card">
                 <h1 class="ForHeader">Запис успішно оновлено.</h1>

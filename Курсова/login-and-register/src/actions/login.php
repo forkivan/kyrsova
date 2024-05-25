@@ -26,4 +26,4 @@ if (!password_verify($password, $user['password'])) {
 
 $_SESSION['user']['id'] = $user['id'];
 
-redirect('/kyrsova/Курсова/login-and-register/home.php');
+redirect('/kyrsova/Курсова/account/home.php');

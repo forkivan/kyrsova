@@ -49,6 +49,5 @@ checkGuest();
 
 <p>У мене ще немає <a href="/kyrsova/Курсова/login-and-register/register.php">акаунта</a></p>
 
-<?php include_once __DIR__ . '/components/scripts.php' ?>
 </body>
 </html>
