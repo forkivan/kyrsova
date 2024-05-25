@@ -39,7 +39,7 @@ $picture = 'img/Doctor'.$id.'.png';
                     <div class="day">П'ятниця</div>
                 </div>
                 <div class="times" id="times">
-                <!-- Ці елементи будуть заповнені динамічно за допомогою JavaScript -->
+                <!-- Ці елементи заповнені динамічно за допомогою JavaScript -->
                 </div>
             </div>
         </div>

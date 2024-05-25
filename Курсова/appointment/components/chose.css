@@ -33,6 +33,19 @@ body {
     width: 100%;
 }
 
+.ForButtonConfirm{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ForFormConfirm{
+    width: 30%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 .ForP{
     height: 30%;
     text-align: center;
@@ -61,9 +74,6 @@ body {
     margin: 20px;
 }
 
-.header {
-    display: contents;
-}
 
 .day {
     text-align: center;

@@ -8,7 +8,7 @@
 <body>
 	<?php include 'header.php'; ?>
 	
-	<section id="ServicesSection">
+	<div class="ServicesSection">
 		<h1 class="GreenHeader">Послуги лікарні</h1>
 		
 		<h2 class="MiniGreenHeader">Медичні огляди, діагностика та консультації</h2>
@@ -153,9 +153,7 @@
 			</tr>
 		</table>
 		
-		<h2 class="MiniGreenHeader">Безкоштовні послуги</h2>
-	</section>
-	
+	</div>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

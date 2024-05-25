@@ -1,6 +1,6 @@
-#ServicesSection {
-	margin-top: 5%;
+.ServicesSection {
 	padding: 0 10%;
+	margin: 1% 0 1% 0;
 }
 table {
 	border-collapse: collapse;

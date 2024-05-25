@@ -8,7 +8,7 @@
 <body>
 	<?php include 'header.php'; ?>
 	
-	<section class="BlockForContent">
+	<div class="BlockForContent">
 		<div id="AboutUs">
 			<h1 class="GreenHeader">Про лікарню</h1>
 			<p>
@@ -17,11 +17,8 @@
 			<button class="ButtonMoreInformation">Детальніше</button>
 		</div>
 		<img src="Images/PageIllustration.jpg" id="HospitalIllustration" alt="Hospital illustration">
-	</section>
+	</div>
 	
 	<?php include 'footer.php'; ?>
 </body>
 </html>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="main_page_styles.css">

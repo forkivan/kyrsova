@@ -56,7 +56,3 @@
 	
 </body>
 </html>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="main_page_styles.css">
-<link rel="stylesheet" href="doctor_styles.css">
