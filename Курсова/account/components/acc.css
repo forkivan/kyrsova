@@ -24,7 +24,7 @@ body {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     width: 90%;
 }
 
@@ -36,8 +36,24 @@ body {
 ul.appointments-list {
     list-style-type: none; 
     padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Додамо flex-wrap для обгортання елементів */
+    justify-content: space-around; /* Додамо простір між елементами */
 }
 
-.cancel{
+.appointments-list li {
+    display: flex;
+    flex-direction: column;
+    background: #fff; /* Додамо фон для елементів списку */
+    border: 1px solid #ccc; /* Додамо бордюр для елементів списку */
+    border-radius: 0.25rem;
+    padding: 10px;
+    margin: 10px;
+    width: 30%; /* Ширина для елементів списку */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cancel {
     width: auto !important;
+    align-self: center; /* Центруємо кнопку відміни */
 }
