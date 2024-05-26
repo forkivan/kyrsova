@@ -33,3 +33,11 @@ body {
     width: 100%;
 }
 
+ul.appointments-list {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.cancel{
+    width: auto !important;
+}

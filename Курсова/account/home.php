@@ -4,37 +4,43 @@
 <?php
     checkAuth();
     $user = currentUser();
+    $appointments = getUserAppointments($user['id']);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cancel_appointment'])) {
+        $appointmentId = $_POST['appointment_id'];
+        cancelAppointment($appointmentId, $user['id']);
+        header("Location: /kyrsova/Курсова/account/home.php");
+        exit;
+    }
 ?>
 <body>
 
 <div class="card home">
-        <h1 class="ForHeader">Привіт, <?php echo htmlspecialchars($user['name']); ?>!</h1>
-        <div class="ForHeader">
-            <p>Ваш email: <?php echo htmlspecialchars($user['email']); ?></p>
-            <form action="/kyrsova/Курсова/login-and-register/src/actions/logout.php" method="post">
-                <button role="button">Вийти з облікового запису</button>
-            </form>
-        </div>
-
-        <div class="ForHeader">
-            <h2>Змінити пароль</h2>
-            <form action="change_password.php" method="post">
-                <div>
-                    <label for="current_password">Поточний пароль:</label>
-                    <input type="password" name="current_password" id="current_password" required>
-                </div>
-                <div>
-                    <label for="new_password">Новий пароль:</label>
-                    <input type="password" name="new_password" id="new_password" required>
-                </div>
-                <div>
-                    <label for="confirm_password">Підтвердіть новий пароль:</label>
-                    <input type="password" name="confirm_password" id="confirm_password" required>
-                </div>
-                <button type="submit">Змінити пароль</button>
-            </form>
-        </div>
+    <h1 class="ForHeader">Привіт, <?php echo htmlspecialchars($user['name']); ?>!</h1>
+    <div class="ForHeader">
+        <p>Ваш email: <?php echo htmlspecialchars($user['email']); ?></p>
+        <form action="/kyrsova/Курсова/login-and-register/src/actions/logout.php" method="post">
+            <button role="button">Вийти з облікового запису</button>
+        </form>
+        <h2>Ваші записи до лікарів</h2>
+        <?php if ($appointments): ?>
+            <ul class="appointments-list">
+                <?php foreach ($appointments as $appointment): ?>
+                    <li>
+                        <p>Лікар: <?php echo htmlspecialchars($appointment['doctor_name']); ?></p>
+                        <p>Дата: <?php echo htmlspecialchars($appointment['appointment_date']); ?></p>
+                        <p>Час: <?php echo htmlspecialchars($appointment['appointment_time']); ?></p>
+                        <form action="/kyrsova/Курсова/account/home.php" method="post">
+                            <input type="hidden" name="appointment_id" value="<?php echo $appointment['id']; ?>">
+                            <button class="cancel" type="submit" name="cancel_appointment">Відмінити запис</button>
+                        </form>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p>У вас немає записів до лікарів.</p>
+        <?php endif; ?>
     </div>
+</div>
 
 </body>
 </html>

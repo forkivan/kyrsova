@@ -132,6 +132,54 @@ function updateSchedule($id, $dayTime, $userId) {
 }
 
 
+
+function getUserAppointments($userId) {
+    $pdo = getPDO();
+    $stmt = $pdo->prepare("SELECT a.id, a.appointment_date, a.appointment_time, a.day_of_week, l.name as doctor_name 
+                           FROM appointments a 
+                           JOIN likar l ON a.likar_id = l.id 
+                           WHERE a.user_id = :user_id");
+    $stmt->execute(['user_id' => $userId]);
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+function cancelAppointment($appointmentId, $userId) {
+    $pdo = getPDO();
+
+    try {
+        $pdo->beginTransaction();
+
+        $stmt = $pdo->prepare("SELECT * FROM appointments WHERE id = :id AND user_id = :user_id");
+        $stmt->execute(['id' => $appointmentId, 'user_id' => $userId]);
+        $appointment = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        if ($appointment) {
+            $day = $appointment['day_of_week'];
+            $time = array_search($appointment['appointment_time'], ["12:00", "13:00", "14:00", "15:00", "16:00"]) + 1;
+
+            $stmt = $pdo->prepare("UPDATE likar SET ${day}${time} = NULL WHERE id = :id");
+            $stmt->execute(['id' => $appointment['likar_id']]);
+
+            $stmt = $pdo->prepare("DELETE FROM appointments WHERE id = :id");
+            $stmt->execute(['id' => $appointmentId]);
+
+            $pdo->commit();
+            return true;
+        } else {
+            throw new Exception("Appointment not found or you do not have permission to cancel it.");
+        }
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        error_log("Error cancelling appointment: " . $e->getMessage());
+        return false;
+    }
+}
+
+
+
+
+
+
 function findUser(string $email)
 {
     $pdo = getPDO();
