@@ -2,7 +2,7 @@
 <html lang="ua">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+	<meta name="viewport" content="widtd=device-width, initial-scale=1.0">
 	<title>Achillelius - послуги</title>
 </head>
 <body>
