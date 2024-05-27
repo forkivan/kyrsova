@@ -19,28 +19,42 @@ body {
     padding-right: 20px;
 	width: 40%;
 	
-	p {
-		font-size: 25px;
-	}
+	p { font-size: 25px; }
 	
 	ul li {
 		font-size: 20px;
 		margin: 10px;
 	}
-}
-
-.TextContent h2 {
-    margin-top: 0;
+	
+	h2 { margin-top: 0; }
 }
 
 .ImageContent {
     flex: 1;
     text-align: center;
 	width: 40%;
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
 }
 
-.ImageContent img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+
+
+
+@media(min-width:1001px) and (max-width:1500px) {
+	
+}
+
+@media(max-width:1000px) {
+	.InfoBlock {
+		width: 100%;
+		display: block;
+	}
+	
+	.TextContent, .ImageContent {
+		width: 100%;
+	}
 }

@@ -22,31 +22,31 @@
 				<img src="Images/CardIcon1.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Записатись на прийом</h2> 
 				<p class = "CardText">Забезпечте собі першочергове медичне обслуговування, записавшись на прийом у нашу клініку. Наші досвідчені лікарі готові надати вам кваліфіковану медичну допомогу та забезпечити індивідуальний підхід до вашого стану здоров'я.</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				
 			</div>
 			<div class="Card">
 				<img src="Images/CardIcon2.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Онлайн консультація</h2> 
 				<p class = "CardText">Отримайте професійну медичну консультацію безпосередньо зручно з вашого дому. Наші лікарі доступні для онлайн обговорень, щоб відповісти на ваші питання та надати необхідні рекомендації з підтримки вашого здоров'я.</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				
 			</div>
 			<div class="Card">
 				<img src="Images/CardIcon3.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Найкращі фахівці в країні</h2> 
 				<p class = "CardText">У нашій клініці працюють найкращі медичні фахівці країни, які мають великий досвід у своїй області. За вами - досвідчена та уважна медична допомога, яка гарантує найвищий стандарт якості та результативність лікування.</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				
 			</div>
 			<div class="Card">
 				<img src="Images/CardIcon4.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Дешеві послуги</h2> 
 				<p class = "CardText">Ми розуміємо важливість доступної медичної допомоги, тому пропонуємо широкий спектр послуг за доступними цінами. Наша мета - зробити лікування доступним для всіх пацієнтів без втрати якості.</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				
 			</div>
 			<div class="Card">
 				<img src="Images/CardIcon5.png" class="CardIcon" alt="Testing icon">
 				<h2 class = "CardTitle">Підтримка відомих заходів</h2> 
 				<p class = "CardText">Наша клініка активно підтримує відомі заходи з медичного дослідження та розвитку. Ми беремо участь у проведенні конференцій, семінарів та медичних заходів, щоб бути в курсі останніх досягнень у галузі медицини та забезпечити нашим пацієнтам найкращі інноваційні методи лікування.</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				
 			</div>
 		</div>
 	</section>
