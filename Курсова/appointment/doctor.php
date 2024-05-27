@@ -28,7 +28,7 @@ $picture = 'img/Doctor'.$id.'.png';
         </div>
         
         <div class="doctor">
-            <h3 class="ForHeader">Педіатр</h3>
+            <h3 class="ForHeader">Розклад</h3>
             <input type="hidden" id="scheduleId" value="<?php echo $id?>">
             <div class="schedule">
                 <div class="header"> 
