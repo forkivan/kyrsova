@@ -1,0 +1,46 @@
+body {
+    background-color: #ADC6B9;
+}
+
+.InfoBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+	width: calc(50% - 80px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TextContent {
+    flex: 1;
+    padding-right: 20px;
+	width: 40%;
+	
+	p {
+		font-size: 25px;
+	}
+	
+	ul li {
+		font-size: 20px;
+		margin: 10px;
+	}
+}
+
+.TextContent h2 {
+    margin-top: 0;
+}
+
+.ImageContent {
+    flex: 1;
+    text-align: center;
+	width: 40%;
+}
+
+.ImageContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

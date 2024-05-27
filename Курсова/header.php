@@ -20,7 +20,7 @@ else {
 				<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
 				<li><a class="ArrowButton" href="<?php echo $link?>"><?php echo $user ?></a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
-				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus.php">Про нас</a></li>
+				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Запис до лікаря</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\account\home.php">Кабінет</a></li>
@@ -34,7 +34,7 @@ else {
 				<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
 				<li><a class="ArrowButton" href="<?php echo $link?>"><?php echo $user ?></a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
-				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus.php">Про нас</a></li>
+				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Запис до лікаря</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\account\home.php">Кабінет</a></li>
