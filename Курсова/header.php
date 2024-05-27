@@ -22,7 +22,6 @@ else {
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
-				<li><a class="ArrowButton" href="\kyrsova\Курсова\alldoctors.php">Лікарі</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Запис до лікаря</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\account\home.php">Кабінет</a></li>
 			</ul>
@@ -37,7 +36,6 @@ else {
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
-				<li><a class="ArrowButton" href="\kyrsova\Курсова\alldoctors.php">Лікарі</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\appointment\chose.php">Запис до лікаря</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\account\home.php">Кабінет</a></li>
 			</ul>
