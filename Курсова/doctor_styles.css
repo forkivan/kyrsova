@@ -29,6 +29,7 @@
 .PersonIcon {
 	float: inline-start;
 	width: 100%;
+	background-color: white;
 }
 
 #AllWorkerSection {

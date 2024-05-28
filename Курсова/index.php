@@ -62,29 +62,54 @@
 		<img src="Images/PageIllustration.jpg" id="HospitalIllustration" alt="Hospital illustration">
 	</section>
 	
+	<?php
+		$id1 = random_int(1, 20);;
+		$id2 = random_int(1, 20);;
+		$id3 = random_int(1, 20);;
+		$specialty1 = findSpecialty($id1);
+		$specialty2 = findSpecialty($id2);
+		$specialty3 = findSpecialty($id3);
+		$name1 = findName($id1);
+		$name2 = findName($id2);
+		$name3 = findName($id3);
+		$picture1 = 'appointment/img/Doctor'.$id1.'.png';
+		$picture2 = 'appointment/img/Doctor'.$id2.'.png';
+		$picture3 = 'appointment/img/Doctor'.$id3.'.png';
+	?>
+
 	<section id="WorkerSection">
 		<h1 class="GreenHeader">Лікарі</h1>
 		<div class="BlockForContent">
 			<div class="DoctorsRectangle">
-				<img src="Images/DemoWomenPerson1.jpg" class="PersonIcon" alt="Testing icon">
-				<h2 class = "CardTitle">Олександра Михайлівна Петренко</h2> 
-				<p class = "CardText">Лікар-хірург вищої категорії</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				<?php echo '<img class="PersonIcon" alt="Testing icon" src="'.$picture1.'">';?>
+				<h2 class = "CardTitle"><?php echo $name1['name']?></h2> 
+				<p class = "CardText"><?php echo $specialty1['specialty']?></p>
+				<form class="doctor" action="appointment/doctor.php" method="post">
+					<?php echo '<input type="text" id="id" name="id" value="' . ($id1) . '" hidden>'; ?>
+					<button class="ButtonMoreInformation" type="submit">Детальніше</button>
+           		</form>
+				
 			</div>
 			<div class="DoctorsRectangle">
-				<img src="Images/DemoMenPerson1.jpg" class="PersonIcon" alt="Testing icon">
-				<h2 class = "CardTitle">Ігор Володимирович Ковальов</h2> 
-				<p class = "CardText">Лікар-пульмонолог</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				<?php echo '<img class="PersonIcon" alt="Testing icon" src="'.$picture2.'">';?>
+				<h2 class = "CardTitle"><?php echo $name2['name']?></h2> 
+				<p class = "CardText"><?php echo $specialty2['specialty']?></p>
+				<form class="doctor" action="appointment/doctor.php" method="post">
+					<?php echo '<input type="text" id="id" name="id" value="' . ($id2) . '" hidden>'; ?>
+					<button class="ButtonMoreInformation" type="submit">Детальніше</button>
+           		</form>
 			</div>
 			<div class="DoctorsRectangle">
-				<img src="Images/DemoWomenPerson2.jpg" class="PersonIcon" alt="Testing icon">
-				<h2 class = "CardTitle">Анна Сергіївна Лисенко</h2> 
-				<p class = "CardText">Лікар-фармацевт</p>
-				<button class="ButtonMoreInformation">Детальніше</button>
+				<?php echo '<img class="PersonIcon" alt="Testing icon" src="'.$picture3.'">';?>
+				<h2 class = "CardTitle"><?php echo $name3['name']?></h2> 
+				<p class = "CardText"><?php echo $specialty3['specialty']?></p>
+				<form class="doctor" action="appointment/doctor.php" method="post">
+					<?php echo '<input type="text" id="id" name="id" value="' . ($id3) . '" hidden>'; ?>
+					<button class="ButtonMoreInformation" type="submit">Детальніше</button>
+           		</form>
 			</div>
 		</div>
-		<button id="ButtonSearchDoctor" onclick="window.location.href='appointment/chose.php'">Шукати лікаря</button>
+		<button id="ButtonSearchDoctor" onclick="window.location.href='appointment/chose.php'">Інші лікарі</button>
 	</section>
 	
 	<?php include 'footer.php'; ?>
