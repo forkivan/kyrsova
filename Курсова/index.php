@@ -63,9 +63,9 @@
 	</section>
 	
 	<?php
-		$id1 = random_int(1, 20);;
-		$id2 = random_int(1, 20);;
-		$id3 = random_int(1, 20);;
+		$id1 = random_int(1, 20);
+		$id2 = getRandomNumberExcluding([$id1]);
+		$id3 = getRandomNumberExcluding([$id1, $id2]);
 		$specialty1 = findSpecialty($id1);
 		$specialty2 = findSpecialty($id2);
 		$specialty3 = findSpecialty($id3);

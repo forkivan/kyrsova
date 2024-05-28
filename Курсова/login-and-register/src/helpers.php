@@ -176,7 +176,12 @@ function cancelAppointment($appointmentId, $userId) {
 }
 
 
-
+function getRandomNumberExcluding($exclude) {
+    do {
+        $randomNumber = random_int(1, 20);
+    } while (in_array($randomNumber, $exclude));
+    return $randomNumber;
+}
 
 
 
