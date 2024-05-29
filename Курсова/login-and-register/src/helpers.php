@@ -94,32 +94,49 @@ function addAppointment($userId, $likarId, $date, $time, $dayOfWeek) {
     ]);
 }
 
-function updateSchedule($id, $dayTime, $userId) {
+function updateSchedule($id, $dayTime, $userId, $posluga) {
     $pdo = getPDO();
 
     $day = substr($dayTime, 0, 3);
     $timeIndex = substr($dayTime, 3);
 
-    $date = date('Y-m-d'); // Можете оновити логіку для отримання правильної дати
+    $date = date('Y-m-d'); 
     $times = ["12:00", "13:00", "14:00", "15:00", "16:00"];
     $time = isset($times[$timeIndex - 1]) ? $times[$timeIndex - 1] : '';
+
+    $poslugaColumn = '';
+    if ($posluga === 1) {
+        $poslugaColumn = 'posluga1';
+    } elseif ($posluga === 2) {
+        $poslugaColumn = 'posluga2';
+    } elseif ($posluga === 3) {
+        $poslugaColumn = 'posluga3';
+    }
 
     try {
         $pdo->beginTransaction();
 
+        // Оновив розклад, щоб позначити часовий проміжок як заброньований
         $stmt = $pdo->prepare("UPDATE likar SET ${day}${timeIndex} = 1 WHERE id = :id");
         $stmt->execute(['id' => $id]);
 
+        // Отримав вибраний текст послуги
+        $stmt = $pdo->prepare("SELECT ${poslugaColumn} FROM likar WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+        $poslugaText = $stmt->fetchColumn();
+
+        // Вставив запис у таблицю записів
         $stmt = $pdo->prepare("
-            INSERT INTO appointments (user_id, likar_id, appointment_date, appointment_time, day_of_week) 
-            VALUES (:user_id, :likar_id, :appointment_date, :appointment_time, :day_of_week)
+            INSERT INTO appointments (user_id, likar_id, appointment_date, appointment_time, day_of_week, posluga) 
+            VALUES (:user_id, :likar_id, :appointment_date, :appointment_time, :day_of_week, :posluga)
         ");
         $stmt->execute([
             'user_id' => $userId,
             'likar_id' => $id,
             'appointment_date' => $date,
             'appointment_time' => $time,
-            'day_of_week' => $day
+            'day_of_week' => $day,
+            'posluga' => $poslugaText
         ]);
 
         $pdo->commit();
@@ -130,6 +147,7 @@ function updateSchedule($id, $dayTime, $userId) {
         return false;
     }
 }
+
 
 
 
