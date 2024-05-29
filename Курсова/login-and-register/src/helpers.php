@@ -212,6 +212,20 @@ function findName(int $id)
     return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
+function findPosluga(int $id, int $poslugaNumber)
+{
+    $pdo = getPDO();
+
+    $poslugaColumn = 'posluga' . $poslugaNumber;
+    
+    $stmt = $pdo->prepare("SELECT $poslugaColumn FROM likar WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+}
+
+
+
 function currentUser()
 {
     $pdo = getPDO();

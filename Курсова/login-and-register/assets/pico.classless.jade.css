@@ -607,9 +607,6 @@ body > main,
 /**
  * Section
  */
-section {
-  margin-bottom: var(--pico-block-spacing-vertical);
-}
 
 /**
  * Typography

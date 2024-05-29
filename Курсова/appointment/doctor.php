@@ -6,6 +6,9 @@ checkAuth();
 $id = $_POST['id'] ?? null;
 $specialty = findSpecialty($id);
 $name = findName($id);
+$posluga1 = findPosluga($id, 1);
+$posluga2 = findPosluga($id, 2);
+$posluga3 = findPosluga($id, 3);
 
 $picture = 'img/Doctor'.$id.'.png';
 
@@ -54,9 +57,9 @@ $picture = 'img/Doctor'.$id.'.png';
             </div>
 			<hr class="TableLine">
 			<h3 class="ForHeader">Оберіть послугу</h3>
-			<p><input type="radio" name="Act" value="1" checked ></input>Консультація</p>
-			<p><input type="radio" name="Act" value="2" ></input>Не консультація</p>
-			<p><input type="radio" name="Act" value="3" ></input>Не не консультація</p>
+			<p><input type="radio" name="Act" value="1" checked ></input> <?php echo $posluga1['posluga1']?> </p>
+			<p><input type="radio" name="Act" value="2" ></input> <?php echo $posluga2['posluga2']?> </p>
+			<p><input type="radio" name="Act" value="3" ></input> <?php echo $posluga3['posluga3']?> </p>
         </div>
 		
 	</div>
