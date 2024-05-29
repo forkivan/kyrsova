@@ -15,10 +15,6 @@ checkAuth();
         header("Location: /kyrsova/Курсова/account/home.php");
         exit;
     }
-    if(!isset($_SESSION['user']['id'])){
-        include_once __DIR__ . '/../../header_login.php';
-    }
-    else include_once __DIR__ . '/../../header_logout.php';
 ?>
 <body>
 
