@@ -85,7 +85,7 @@
 
 	<section id="WorkerSection">
 		<h1 class="GreenHeader">Лікарі</h1>
-		<div class="BlockForContent2">
+		<div class="BlockForContent">
 			<div class="DoctorsRectangle">
 				<?php echo '<img class="PersonIcon" alt="Testing icon" src="'.$picture1.'">';?>
 				<h2 class = "CardTitle"><?php echo $name1['name']?></h2> 
