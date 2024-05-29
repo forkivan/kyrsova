@@ -39,11 +39,21 @@ $picture = 'img/Doctor'.$id.'.png';
                     <div class="day">П'ятниця</div>
                 </div>
                 <div class="times" id="times">
-                <!-- Ці елементи заповнені динамічно за допомогою JavaScript -->
+                <!-- JavaScript генерує елементи -->
                 </div>
             </div>
+			<hr class="TableLine">
+			<h3 class="ForHeader">Нажимайте на підходящий вам час</h3>
+			
+			<hr class="TableLine">
+			<div class="anotation">
+				<div class="time green">Час вільний</div>
+				<div class="time red">Час зайнятий</div>
+			</div>
+			
         </div>
-    </div>
+		
+	</div>
     <script src="script.js"></script>
 </body>
 </html>
