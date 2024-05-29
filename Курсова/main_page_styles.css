@@ -132,4 +132,9 @@
 			li { width: 100%; }
 		}
 	}
+	
+	#MainLogo {
+		background-image: url('Images/MiniMainPageBackground.jpg');
+		height: 60vw;
+	}
 }
