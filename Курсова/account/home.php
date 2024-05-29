@@ -1,9 +1,12 @@
-<?php include_once __DIR__ . '/../login-and-register/src/helpers.php' ?>
+<?php 
+include_once __DIR__ . '/../login-and-register/src/helpers.php';
+checkAuth();
+?>
+
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
 <?php include_once __DIR__ . '/components/head3.php'?>
 <?php
-    checkAuth();
     $user = currentUser();
     $appointments = getUserAppointments($user['id']);
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cancel_appointment'])) {
@@ -12,6 +15,10 @@
         header("Location: /kyrsova/Курсова/account/home.php");
         exit;
     }
+    if(!isset($_SESSION['user']['id'])){
+        include_once __DIR__ . '/../../header_login.php';
+    }
+    else include_once __DIR__ . '/../../header_logout.php';
 ?>
 <body>
 
