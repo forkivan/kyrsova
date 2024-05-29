@@ -69,11 +69,19 @@
 @media(max-width:640px) {
 	
 	.DoctorsRectangle {
-		width: 45%;
+		width: 95%;
+		margin: 3%;
 		
 		.ButtonMoreInformation {
 			margin: 20px 10px;
 		}
+	}
+	
+	#ButtonSearchDoctor {
+		padding: 10px;
+		width: 95%;
+		margin: 0px;
+		margin-top: 20px;
 	}
 	
 }

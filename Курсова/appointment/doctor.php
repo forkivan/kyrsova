@@ -28,6 +28,16 @@ $picture = 'img/Doctor'.$id.'.png';
         </div>
         
         <div class="doctor">
+			
+			<h3 class="ForHeader">Нажимайте на підходящий вам час</h3>
+			
+			<hr class="TableLine">
+			<div class="anotation">
+				<div class="time green">Час вільний</div>
+				<div class="time red">Час зайнятий</div>
+			</div>
+			<hr class="TableLine">
+			
             <h3 class="ForHeader">Розклад</h3>
             <input type="hidden" id="scheduleId" value="<?php echo $id?>">
             <div class="schedule">
@@ -43,14 +53,10 @@ $picture = 'img/Doctor'.$id.'.png';
                 </div>
             </div>
 			<hr class="TableLine">
-			<h3 class="ForHeader">Нажимайте на підходящий вам час</h3>
-			
-			<hr class="TableLine">
-			<div class="anotation">
-				<div class="time green">Час вільний</div>
-				<div class="time red">Час зайнятий</div>
-			</div>
-			
+			<h3 class="ForHeader">Оберіть послугу</h3>
+			<p><input type="radio" name="Act" value="1" checked ></input>Консультація</p>
+			<p><input type="radio" name="Act" value="2" ></input>Не консультація</p>
+			<p><input type="radio" name="Act" value="3" ></input>Не не консультація</p>
         </div>
 		
 	</div>
