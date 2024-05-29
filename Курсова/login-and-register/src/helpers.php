@@ -153,7 +153,7 @@ function updateSchedule($id, $dayTime, $userId, $posluga) {
 
 function getUserAppointments($userId) {
     $pdo = getPDO();
-    $stmt = $pdo->prepare("SELECT a.id, a.appointment_date, a.appointment_time, a.day_of_week, l.name as doctor_name 
+    $stmt = $pdo->prepare("SELECT a.id, a.appointment_date, a.appointment_time, a.day_of_week, a.posluga, l.name as doctor_name 
                            FROM appointments a 
                            JOIN likar l ON a.likar_id = l.id 
                            WHERE a.user_id = :user_id");

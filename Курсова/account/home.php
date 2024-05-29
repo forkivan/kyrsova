@@ -31,6 +31,7 @@ checkAuth();
                 <?php foreach ($appointments as $appointment): ?>
                     <li>
                         <p>Лікар: <?php echo htmlspecialchars($appointment['doctor_name']); ?></p>
+                        <p>Послуга: <?php echo htmlspecialchars($appointment['posluga']); ?></p>
                         <p>Дата: <?php echo htmlspecialchars($appointment['appointment_date']); ?></p>
                         <p>Час: <?php echo htmlspecialchars($appointment['appointment_time']); ?></p>
                         <form action="/kyrsova/Курсова/account/home.php" method="post">
