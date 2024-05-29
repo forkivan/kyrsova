@@ -1,3 +1,4 @@
+<?php include_once __DIR__ . '/../login-and-register/src/helpers.php' ?>
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
 <?php include_once __DIR__ . '/components/head3.php'?>

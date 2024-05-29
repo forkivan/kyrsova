@@ -6,7 +6,6 @@ checkGuest();
 
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
-<?php include_once __DIR__ . '/components/head.php'?>
 <body>
 
 <form class="card" action="src/actions/register.php" method="post" enctype="multipart/form-data">

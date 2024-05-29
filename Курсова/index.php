@@ -7,7 +7,12 @@
 	<title>Achillelius - Українська національна клінічна лікарня</title>
 </head>
 <body>
-	<?php include 'header.php'; ?>
+	<?php 
+		if(!isset($_SESSION['user']['id'])){
+			include_once __DIR__ . '/header_login.php';
+		}
+		else include_once __DIR__ . '/header_logout.php';
+	?>
 	
 	<section>
 		<div id="MainLogo">

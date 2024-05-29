@@ -1,3 +1,4 @@
+<?php include_once __DIR__ . '/../login-and-register/src/helpers.php' ?>
 <!DOCTYPE html>
 <html lang="ua">
 <head>
@@ -6,7 +7,12 @@
 	<title>Achillelius - про лікарню</title>
 </head>
 <body>
-	<?php include_once __DIR__ . '/../header.php'?>
+	<?php 
+		if(!isset($_SESSION['user']['id'])){
+			include_once __DIR__ . '/../header_login.php';
+		}
+		else include_once __DIR__ . '/../header_logout.php';
+	?>
 	<link rel="stylesheet" href="components/aboutus.css">
 	
 	<section class="BlockForContent">

@@ -1,24 +1,10 @@
-<?php
-require_once __DIR__ . '/login-and-register/src/helpers.php';
-
-if (!isset($_SESSION['user']['id'])) {
-	$user = 'Вхід';
-	$link = '\kyrsova\Курсова\login-and-register\login.php';
-}
-else {
-	$user = 'Вихід';
-	$link = '\kyrsova\Курсова\login-and-register\src\actions\logout.php';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="ua">
 	<div class="showHeader">
 		<nav>
 			<ul>
 				<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
-				<li><a class="ArrowButton" href="<?php echo $link?>"><?php echo $user ?></a></li>
+				<li><a class="ArrowButton" href="\kyrsova\Курсова\login-and-register\src\actions\logout.php">Вихід</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
@@ -32,7 +18,7 @@ else {
 		<nav>
 			<ul>
 				<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
-				<li><a class="ArrowButton" href="<?php echo $link?>"><?php echo $user ?></a></li>
+				<li><a class="ArrowButton" href="\kyrsova\Курсова\login-and-register\src\actions\logout.php">Вихід</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\index.php">Головна</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\aboutus\aboutus.php">Про нас</a></li>
 				<li><a class="ArrowButton" href="\kyrsova\Курсова\services.php">Послуги</a></li>
