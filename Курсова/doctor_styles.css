@@ -1,22 +1,18 @@
 .DoctorsRectangle {
-	width: calc(5vw + 15vh);
-	
+	width: 30%;
 	margin: 1%;
-	padding-top: 0;
-	
-	border: 5px solid #17C18E;
-	
+	padding-top: 0;	
+	border: 5px solid #17C18E;	
 	box-sizing: border-box;
-	text-align: center;
-	
+	text-align: center;	
 	display: flex;
 	flex-direction: column; 
-	flex-wrap: wrap;
-	justify-content: top;
 	align-items: center;
 	color: #A8FFE3;
-	transition: all 0.3s ease;
-	
+	transition: all 0.3s ease;	
+	h2{
+		font-size: 23px;
+	}
 	.ButtonMoreInformation {
 		background: none; 
 		border: 5px solid #17C18E;
@@ -43,28 +39,16 @@
 	}
 }
 
+@media (min-width:641px) and (max-width:720px){
 
-@media(min-width:1001px) and (max-width:1500px) {
 	.DoctorsRectangle {
-		width: calc(10vw + 10vh);
-		
 		.ButtonMoreInformation {
-			margin: 20px;
+			margin: 20px 10px;
+			font-size: 17px;
 		}
 	}
 }
 
-@media(min-width:641px) and (max-width:1000px) {
-    
-	.DoctorsRectangle {
-		width: calc(15vw + 10vh);
-		
-		.ButtonMoreInformation {
-			margin: 20px 5px;
-		}
-	}
-	
-}
 
 @media(max-width:640px) {
 	

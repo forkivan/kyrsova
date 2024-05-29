@@ -17,7 +17,7 @@ body {
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		padding-right: 15%;
+		padding-right: 5%;
 		
 		li { float: right; }
 	}
@@ -35,7 +35,7 @@ body {
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		padding-right: 15%;
+		padding-right: 5%;
 		
 		li { float: right; }
 	}
@@ -102,10 +102,14 @@ body {
 .BlockForContent {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
-
+.BlockForContent2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 
 
@@ -151,7 +155,6 @@ body {
 
 
 
-
 @media(min-width:1001px) and (max-width:1500px) {
 	#EndLinks { padding: 1.5% 10%; }
 	
@@ -160,6 +163,13 @@ body {
 		margin: 1%; 
 	}
 }
+
+@media(min-width:641px) and (max-width:720px) {
+	.ArrowButton {
+		font-size: 16px;
+	}
+}
+
 
 @media(min-width:641px) and (max-width:1000px) {
 	#EndLinks { padding: 1.5% 0; }
