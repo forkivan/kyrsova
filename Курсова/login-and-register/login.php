@@ -48,6 +48,8 @@ checkGuest();
 </form>
 
 <p>У мене ще немає <a href="/kyrsova/Курсова/login-and-register/register.php">акаунта</a></p>
+<a href="/kyrsova/Курсова/"><button>На головну</button></a>
+
 
 </body>
 </html>

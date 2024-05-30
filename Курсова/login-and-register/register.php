@@ -88,6 +88,7 @@ checkGuest();
 </form>
 
 <p>У мене вже є <a href="/kyrsova/Курсова/login-and-register/login.php">акаунт</a></p>
+<a href="/kyrsova/Курсова/"><button>На головну</button></a>
 
 <?php include_once __DIR__ . '/components/scripts.php' ?>
 </body>
