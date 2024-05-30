@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 25, 2024 at 10:38 PM
+-- Generation Time: May 30, 2024 at 10:57 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -34,16 +34,16 @@ CREATE TABLE `appointments` (
   `appointment_date` date NOT NULL,
   `appointment_time` time NOT NULL,
   `day_of_week` varchar(10) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `posluga` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `appointments`
 --
 
-INSERT INTO `appointments` (`id`, `user_id`, `likar_id`, `appointment_date`, `appointment_time`, `day_of_week`, `created_at`) VALUES
-(1, 1, 1, '2024-05-25', '12:00:00', 'Mon', '2024-05-25 20:04:33'),
-(2, 1, 1, '2024-05-25', '12:00:00', 'Tue', '2024-05-25 20:12:14');
+INSERT INTO `appointments` (`id`, `user_id`, `likar_id`, `appointment_date`, `appointment_time`, `day_of_week`, `posluga`) VALUES
+(3, 1, 1, '2024-05-29', '12:00:00', 'Tue', 'Консультація терапевта'),
+(4, 1, 1, '2024-05-29', '13:00:00', 'Tue', 'Діагностика здоров\'я');
 
 -- --------------------------------------------------------
 
@@ -79,34 +79,37 @@ CREATE TABLE `likar` (
   `Fri2` int(5) DEFAULT NULL,
   `Fri3` int(5) DEFAULT NULL,
   `Fri4` int(5) DEFAULT NULL,
-  `Fri5` int(5) DEFAULT NULL
+  `Fri5` int(5) DEFAULT NULL,
+  `posluga1` varchar(255) DEFAULT NULL,
+  `posluga2` varchar(255) DEFAULT NULL,
+  `posluga3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `likar`
 --
 
-INSERT INTO `likar` (`id`, `specialty`, `name`, `Mon1`, `Mon2`, `Mon3`, `Mon4`, `Mon5`, `Tue1`, `Tue2`, `Tue3`, `Tue4`, `Tue5`, `Wed1`, `Wed2`, `Wed3`, `Wed4`, `Wed5`, `Thu1`, `Thu2`, `Thu3`, `Thu4`, `Thu5`, `Fri1`, `Fri2`, `Fri3`, `Fri4`, `Fri5`) VALUES
-(1, 'Терапевт', 'Іванов Олександр Сергійович', 1, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'Педіатр', 'Петров Андрій Миколайович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'Хірург', 'Сидоров Дмитро Олегович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'Кардіолог', 'Ковальчук Михайло Іванович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 'Невролог', 'Литвиненко Павло Андрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 'Гастроентеролог', 'Кравець Юрій Володимирович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 'Ендокринолог', 'Шевченко Віктор Петрович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 'Дерматолог', 'Олійник Олена Миколаївна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, 'Офтальмолог', 'Морозов Олексій Сергійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10, 'Оториноларинголог', 'Савченко Анна Вікторівна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(11, 'Пульмонолог', 'Гончаренко Іван Вікторович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 'Ревматолог', 'Ткаченко Сергій Михайлович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(13, 'Нефролог', 'Бойко Василь Дмитрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(14, 'Уролог', 'Карпенко Наталія Сергіївна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, 'Гінеколог', 'Лисенко Ігор Юрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(16, 'Психіатр', 'Мельник Євген Петрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(17, 'Онколог', 'Дорошенко Артем Петрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(18, 'Інфекціоніст', 'Козлов Олег Васильович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(19, 'Травматолог', 'Грищук Олександр Андрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(20, 'Алерголог', 'Чорна Марія Олександрівна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `likar` (`id`, `specialty`, `name`, `Mon1`, `Mon2`, `Mon3`, `Mon4`, `Mon5`, `Tue1`, `Tue2`, `Tue3`, `Tue4`, `Tue5`, `Wed1`, `Wed2`, `Wed3`, `Wed4`, `Wed5`, `Thu1`, `Thu2`, `Thu3`, `Thu4`, `Thu5`, `Fri1`, `Fri2`, `Fri3`, `Fri4`, `Fri5`, `posluga1`, `posluga2`, `posluga3`) VALUES
+(1, 'Терапевт', 'Іванов Олександр Сергійович', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація терапевта', 'Діагностика здоров\'я', 'Лікування хвороб'),
+(2, 'Педіатр', 'Петров Андрій Вадимович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація педіатра', 'Плановий огляд', 'Вакцинація дітей'),
+(3, 'Хірург', 'Сидоров Дмитро Олегович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація хірурга', 'Операційне втручання', 'Післяопераційний догляд'),
+(4, 'Кардіолог', 'Ковальчук Михайло Іванович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація кардіолога', 'Електрокардіограма', 'Лікування аритмії'),
+(5, 'Невролог', 'Литвиненко Павло Андрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація невролога', 'Електроенцефалографія', 'Лікування мігрені'),
+(6, 'Гастроентеролог', 'Кравець Юрій Іванович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація гастроентеролога', 'Ендоскопія', 'Лікування гастриту'),
+(7, 'Ендокринолог', 'Шевченко Віктор Петрович\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація ендокринолога', 'Тест на глюкозу', 'Лікування діабету'),
+(8, 'Дерматолог', 'Олійник Олена Миколаївна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація дерматолога', 'Дерматоскопія', 'Лікування акне'),
+(9, 'Офтальмолог', 'Морозов Олексій Сергійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація офтальмолога', 'Перевірка зору', 'Лікування катаракти'),
+(10, 'Оториноларинголог', 'Савченко Анна Вікторівна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація отоларинголога', 'Аудіометрія', 'Лікування синуситу'),
+(11, 'Пульмонолог', 'Гончаренко Іван Вікторович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація пульмонолога', 'Спірометрія', 'Лікування астми'),
+(12, 'Ревматолог', 'Ткаченко Сергій Вадимович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація ревматолога', 'Аналіз крові', 'Лікування артриту'),
+(13, 'Нефролог', 'Бойко Василь Дмитрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація нефролога', 'Аналіз сечі', 'Лікування ниркових хвороб'),
+(14, 'Уролог', 'Карпенко Наталія Сергіївна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація уролога', 'УЗД сечового міхура', 'Лікування простатиту'),
+(15, 'Гінеколог', 'Лисенко Ігор Юрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація гінеколога', 'УЗД малого тазу', 'Лікування ендометріозу'),
+(16, 'Психіатр', 'Мельник Євген Петрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація психіатра', 'Психіатрична оцінка', 'Лікування депресії'),
+(17, 'Онколог', 'Дорошенко Артем Петрович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація онколога', 'Біопсія', 'Лікування раку'),
+(18, 'Інфекціоніст', 'Козлов Олег Васильович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація інфекціоніста', 'ПЛР-тестування', 'Лікування вірусних інфекцій'),
+(19, 'Травматолог', 'Грищук Олександр Андрійович', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація травматолога', 'Рентген', 'Лікування переломів'),
+(20, 'Алерголог', 'Чорна Марія Яківна', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Консультація алерголога', 'Алерготести', 'Лікування алергії');
 
 -- --------------------------------------------------------
 
@@ -161,7 +164,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `likar`
