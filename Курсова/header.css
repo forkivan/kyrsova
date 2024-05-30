@@ -1,0 +1,81 @@
+.showHeader {
+    position: fixed;
+    z-index: 5;
+}
+.hideHeader {
+    z-index: 0;
+}
+
+.showHeader, .hideHeader {
+    border-bottom: 4px solid #06683D;
+    background-color: #FFFFFF;
+    width: 100%;
+    top: 0;
+}
+
+.showHeader nav ul, .hideHeader nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-right: 5%;
+}
+
+.showHeader nav ul li, .hideHeader nav ul li {
+    float: right;
+}
+
+
+#LogoHospital {
+    height: 4vh;
+    margin: 5px;
+}
+
+.ArrowButton {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: #050505;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    float: right;
+}
+
+.ArrowButton:hover {
+    background-color: #E0EFFF;
+}
+
+
+@media(min-width:641px) and (max-width:720px) {
+	.ArrowButton {
+		font-size: 16px;
+	}
+}
+
+@media(max-width:640px) {
+
+    #LogoHospital {
+        margin: 1% 25%;
+        padding: 0;
+        height: 3%;
+        width: 50%;
+    }
+
+    .showHeader {
+        display: none;
+    }
+
+    .hideHeader {
+        nav ul {
+            padding: 0;
+        }
+        nav ul li {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #DDD;
+                
+        }
+    }
+}

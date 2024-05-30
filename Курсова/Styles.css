@@ -1,203 +1,113 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-}
-
-.showHeader {
-	border-bottom: 4px solid #06683D;
-	background-color: #FFFFFF;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	Z-index: 5;
-	
-	nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		padding-right: 5%;
-		
-		li { float: right; }
-	}
-}
-
-.hideHeader {
-	border-bottom: 4px solid #06683D;
-	background-color: #FFFFFF;
-	width: 100%;
-	top: 0;
-	Z-index: 0;
-
-	nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		padding-right: 5%;
-		
-		li { float: right; }
-	}
-}
-
-
-
-
-
-#LogoHospital {
-	height: 4vh;
-	margin: 5px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 .ButtonMoreInformation {
-	background: #17C18E; 
-	color: #fff; 
-	border: none;
-	border-radius: 40px; 
-	cursor: pointer;
-	
-	font-size: 20px;
-	font-weight: bold;
-	font-family: arial;
-	
-	padding: 10px 20px;
+    background: #17C18E;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: arial;
+    padding: 10px 20px;
 }
-
-.ArrowButton {
-	display: block;
-	text-align: center;
-	padding: 14px 16px;
-	
-	color: #050505;
-	text-decoration: none;
-	font-size: 20px;
-	transition: all 0.5s ease;
-	
-	float: right;
-}
-
-.ArrowButton:hover {
-	background-color: #E0EFFF;
-}
-
-
-
-
-
 
 .GreenHeader {
-	margin: 0;
-	font-size: 40px;
-	padding-bottom: 10px;
-	color: #17C18E;
-	border-bottom: 3px solid #17C18E;
+    margin: 0;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: #17C18E;
+    border-bottom: 3px solid #17C18E;
 }
 
 .MiniGreenHeader {
-	font-size: 30px;
-	color: #3F9E81;
+    font-size: 30px;
+    color: #3F9E81;
 }
 
 .BlockForContent {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
-
-
-
-
-
-
-
 #LinkSection {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: #06281D;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #06281D;
 }
 
 .LinkBlock {
-	width:20%;
-	margin: 2%;
-	color: #7CA597;
-	p, ul {color: #7CA597;}
-	ul li { margin:3%; }
-	ul li a { text-decoration: none; color: #7CA597; }
+    width: 20%;
+    margin: 2%;
+    color: #7CA597;
+}
+
+.LinkBlock p,
+.LinkBlock ul {
+    color: #7CA597;
+}
+
+.LinkBlock ul li {
+    margin: 3%;
+}
+
+.LinkBlock ul li a {
+    text-decoration: none;
+    color: #7CA597;
 }
 
 #EndLinks {
-	width: 100%;
-	padding: 5px 20%;
-	background-color: #032114;
-	
-	a { 
-		float: right; 
-		color: #7CA597;
-		
-		display: block;
-		text-align: center;
-		padding: 1.5% 14px;
-		text-decoration: none;
-		font-size: 15px;
-	}
+    width: 100%;
+    padding: 5px 20%;
+    background-color: #032114;
 }
 
-
-
+#EndLinks a {
+    float: right;
+    color: #7CA597;
+    display: block;
+    text-align: center;
+    padding: 1.5% 14px;
+    text-decoration: none;
+    font-size: 15px;
+}
 
 @media(min-width:1001px) and (max-width:1500px) {
-	#EndLinks { padding: 1.5% 10%; }
-	
-	.LinkBlock { 
-		width:25%; 
-		margin: 1%; 
-	}
-}
+    #EndLinks {
+        padding: 1.5% 10%;
+    }
 
-@media(min-width:641px) and (max-width:720px) {
-	.ArrowButton {
-		font-size: 16px;
-	}
+    .LinkBlock {
+        width: 25%;
+        margin: 1%;
+    }
 }
 
 
 @media(min-width:641px) and (max-width:1000px) {
-	#EndLinks { padding: 1.5% 0; }
-	
-	.LinkBlock { 
-		width:32%; 
-		margin: 5px; 
-	}
+    #EndLinks {
+        padding: 1.5% 0;
+    }
+
+    .LinkBlock {
+        width: 32%;
+        margin: 5px;
+    }
 }
 
 @media(max-width:640px) {
-	nav ul {
-		padding: 0;
-		justify-content: center;
-		li { 
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			border: 2px solid #DDD;
-		}
-		
-	}
-	
-	#LogoHospital { 
-		margin: 1% 25%; 
-		padding: 0;
-		height: 3%;
-		width: 50%;
-	}
-	
-	.LinkBlock { 
-		width:94%; 
-		margin: 3%; 
-	}
-	
-	#EndLinks { padding: 1.5% 0; }
+    .LinkBlock {
+        width: 94%;
+        margin: 3%;
+    }
+
+    #EndLinks {
+        padding: 1.5% 0;
+    }
 }
