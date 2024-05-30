@@ -30,26 +30,10 @@
 			</ul>
 		</div>
 		
-		<div class="LinkBlock">
-			<h1 class="GreenHeader">Про лікарню</h1>
-			<ul>
-				<li><a href="#news">Новини</a></li>
-				<li><a href="#workschedule">Графіки роботи</a></li>
-				<li><a href="#hospitalplans">Структура лікарні</a></li>
-				<li><a href="#history">Історія лікарні</a></li>
-				<li><a href="#director">Директор лікарні</a></li>
-				<li><a href="#workers">Співробітники лікарні</a></li>
-				<li><a href="#questions">Часті запитання</a></li>
-				<li><a href="#vacancies">Вакансії</a></li>
-				<li><a href="#contacts">Контакти</a></li>
-			</ul>
-		</div>
-		
 		<div id="EndLinks">
 			<img src="\kyrsova\Курсова\Images\MainIcon.png" id="LogoHospital" alt="Logo icon"> 
-			<a href="#termsofuse">УМОВИ ВИКОРИСТАННЯ</a>
+			<a href="\kyrsova\Курсова\privacy-policy\conditions.php">УМОВИ ВИКОРИСТАННЯ</a>
 			<a href="\kyrsova\Курсова\privacy-policy\policy.php">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
-			<a href="#contacts">КОНТАКТИ</a>
 		</div>
 		
 	</section>

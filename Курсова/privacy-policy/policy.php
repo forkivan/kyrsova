@@ -22,6 +22,9 @@
 					<div class="row mb-4">
 						<div class="col">
 							<h4><strong>Політика щодо обробки персональних даних</strong></h4>
+							<div class="descr">
+								Останнє оновлення: 30.05.2024
+							</div>
 						</div>
 					</div>
 					<div class="row mb-4">
