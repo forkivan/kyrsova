@@ -46,6 +46,9 @@
     background-color: #E0EFFF;
 }
 
+#menuToggle{
+    display: none;
+}
 
 @media(min-width:641px) and (max-width:720px) {
 	.ArrowButton {
@@ -54,6 +57,16 @@
 }
 
 @media(max-width:640px) {
+    
+    #menuToggle {
+        display: block;
+        padding: 14px 16px;
+        text-align: center;
+        background-color: #06683D;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
 
     #LogoHospital {
         margin: 1% 25%;
@@ -69,6 +82,11 @@
     .hideHeader {
         nav ul {
             padding: 0;
+            display: none;
+            flex-direction: column
+        }
+        nav ul.show {
+            display: flex;
         }
         nav ul li {
             width: 100%;
