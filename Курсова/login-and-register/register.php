@@ -3,7 +3,11 @@ require_once __DIR__ . '/src/helpers.php';
 
 checkGuest();
 ?>
-
+<style>
+    body {
+        height: 150vh !important;
+    }
+</style>
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
 <?php require_once __DIR__ . '/components/head.php'; ?>
@@ -77,6 +81,7 @@ checkGuest();
                 name="terms"
             >
             Я приймаю всі умови користування
+            <p><a href="/kyrsova/Курсова/privacy-policy/conditions.php" target="_blank">Ознайомитись</a></p>
         </label>
     </fieldset>
 
