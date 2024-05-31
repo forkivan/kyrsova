@@ -50,17 +50,11 @@
     display: none;
 }
 
-
-
-/* зміна */
-@media(min-width:641px) and (max-width:805px) {
+@media(min-width:641px) and (max-width:720px) {
 	.ArrowButton {
-		/* font-size: 12px; */
+		font-size: 16px;
 	}
 }
-/* зміна */
-
-
 
 @media(max-width:640px) {
     
