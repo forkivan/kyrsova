@@ -10,7 +10,25 @@ th, td {
 	border: 1px solid #85C6A9;
 	text-align: left;
 	padding: 8px;
+	font-size: 20px;
 }
 th {
 	background-color: #D2f2E2;
+}
+
+@media(min-width:641px) and (max-width:1000px) {
+    th, td {
+		font-size: 15px;
+	}
+}
+
+@media(max-width:640px) {
+	.ServicesSection {
+		padding: 0;
+		margin: 0;
+	}
+	th, td {
+		font-size: 10px;
+		padding: 5px 0;
+	}
 }
