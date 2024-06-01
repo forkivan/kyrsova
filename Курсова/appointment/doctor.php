@@ -32,7 +32,7 @@ $picture = 'img/Doctor'.$id.'.png';
         
         <div class="doctor">
 			
-			<h3 class="ForHeader">Нажимайте на підходящий вам час</h3>
+			<h3 class="ForHeader">Нажимайте на слушний для вас час</h3>
 			
 			<hr class="TableLine">
 			<div class="anotation">
