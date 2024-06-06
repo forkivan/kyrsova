@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             const times = document.getElementById("times");
             const hours = ["12:00", "13:00", "14:00", "15:00", "16:00"];
-            const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']; // Додаємо день вівторок
+            const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']; 
             days.forEach(day => {
                 const column = document.createElement("div");
                 column.classList.add("column");
