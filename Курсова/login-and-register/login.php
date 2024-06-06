@@ -17,7 +17,7 @@ checkGuest();
     <?php endif; ?>
 
     <label for="email">
-        Ім`я
+        E-mail
         <input
             type="text"
             id="email"
