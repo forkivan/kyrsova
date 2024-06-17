@@ -9,7 +9,6 @@ $posluga = isset($_GET['posluga']) ? intval($_GET['posluga']) : 1;
 
 $userId = $_SESSION['user']['id'];
 
-// Отримаємо деталі послуги з таблиці likar
 $pdo = getPDO();
 $stmt = $pdo->prepare("SELECT posluga1, posluga2, posluga3 FROM likar WHERE id = :id");
 $stmt->execute(['id' => $id]);
@@ -43,30 +42,47 @@ $dayName = isset($daysMap[$day]) ? $daysMap[$day] : '';
 ?>
 <!DOCTYPE html>
 <html lang="ua" data-theme="light">
-<?php include_once __DIR__ . '/components/head2.php'?>
+<?php include_once __DIR__ . '/components/head2.php' ?>
+
 <body>
-<?php
+    <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if ($dayTime && updateSchedule($id, $dayTime, $userId, $posluga)) {
-?>
-            <div class="card">
-                <h1 class="ForHeader">Запис успішно оновлено.</h1>
-                <div class="ForButtonConfirm">
-                    <form action="doctor.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <button type="submit">Повернутись</button>
-                    </form>
+        if ($dayTime) {
+            $updateResult = updateSchedule($id, $dayTime, $userId, $posluga);
+            if ($updateResult === true) {
+                ?>
+                <div class="card">
+                    <h1 class="ForHeader">Запис успішно оновлено.</h1>
+                    <div class="ForButtonConfirm">
+                        <form action="doctor.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <button type="submit">Повернутись</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-<?php
-        } else {
-            echo "Сталася помилка при оновленні запису.";
+                <?php
+            } elseif ($updateResult === "Цей час вже зайнятий") {
+                ?>
+                <div class="card">
+                    <h1 class="ForHeader">Цей час вже зайнятий.</h1>
+                    <div class="ForButtonConfirm">
+                        <form action="doctor.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <button type="submit">Повернутись</button>
+                        </form>
+                    </div>
+                </div>
+                <?php
+            } else {
+                echo "Сталася помилка при оновленні запису.";
+            }
         }
     } else {
-?>
+        ?>
         <div class="card">
             <h1 class="ForHeader">Підтвердження</h1>
-            <p class="ForHeader">Ви впевнені, що хочете забронювати у <?php echo htmlspecialchars($dayName); ?> о <?php echo htmlspecialchars($time); ?>?</p>
+            <p class="ForHeader">Ви впевнені, що хочете забронювати у <?php echo htmlspecialchars($dayName); ?> о
+                <?php echo htmlspecialchars($time); ?>?</p>
             <p class="ForHeader">Послуга: <?php echo htmlspecialchars($poslugaText); ?></p>
             <div class="ForButtonConfirm">
                 <form class="ForFormConfirm" method="post">
@@ -81,8 +97,9 @@ $dayName = isset($daysMap[$day]) ? $daysMap[$day] : '';
                 </form>
             </div>
         </div>
-<?php
+        <?php
     }
-?>
+    ?>
 </body>
+
 </html>

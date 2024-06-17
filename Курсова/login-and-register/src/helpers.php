@@ -113,19 +113,33 @@ function updateSchedule($id, $dayTime, $userId, $posluga) {
         $poslugaColumn = 'posluga3';
     }
 
+    $lockName = "likar_{$id}_{$day}_{$timeIndex}";
+
     try {
         $pdo->beginTransaction();
 
-        // Оновив розклад, щоб позначити часовий проміжок як заброньований
-        $stmt = $pdo->prepare("UPDATE likar SET ${day}${timeIndex} = 1 WHERE id = :id");
-        $stmt->execute(['id' => $id]);
+        if (!acquireLock($lockName)) {
+            $pdo->rollBack();
+            return "Цей час вже зайнятий";
+        }
 
-        // Отримав вибраний текст послуги
+        $stmt = $pdo->prepare("SELECT ${day}${timeIndex} FROM likar WHERE id = :id FOR UPDATE");
+        $stmt->execute(['id' => $id]);
+        $isBooked = $stmt->fetchColumn();
+
+        if ($isBooked) {
+            releaseLock($lockName);
+            $pdo->rollBack();
+            return "Цей час вже зайнятий";
+        }
+
         $stmt = $pdo->prepare("SELECT ${poslugaColumn} FROM likar WHERE id = :id");
         $stmt->execute(['id' => $id]);
         $poslugaText = $stmt->fetchColumn();
 
-        // Вставив запис у таблицю записів
+        $stmt = $pdo->prepare("UPDATE likar SET ${day}${timeIndex} = 1 WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+
         $stmt = $pdo->prepare("
             INSERT INTO appointments (user_id, likar_id, appointment_date, appointment_time, day_of_week, posluga) 
             VALUES (:user_id, :likar_id, :appointment_date, :appointment_time, :day_of_week, :posluga)
@@ -140,13 +154,42 @@ function updateSchedule($id, $dayTime, $userId, $posluga) {
         ]);
 
         $pdo->commit();
+        releaseLock($lockName);
         return true;
     } catch (Exception $e) {
         $pdo->rollBack();
+        releaseLock($lockName);
         error_log("Error updating schedule: " . $e->getMessage());
         return false;
     }
 }
+
+
+
+// принцип mutex
+function acquireLock($name) {
+    $pdo = getPDO();
+    $stmt = $pdo->prepare("SELECT is_locked FROM locks WHERE name = :name FOR UPDATE");
+    $stmt->execute(['name' => $name]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($row) {
+        if ($row['is_locked']) {
+            return false;
+        }
+        $stmt = $pdo->prepare("UPDATE locks SET is_locked = TRUE, locked_at = NOW() WHERE name = :name");
+    } else {
+        $stmt = $pdo->prepare("INSERT INTO locks (name, is_locked) VALUES (:name, TRUE)");
+    }
+    return $stmt->execute(['name' => $name]);
+}
+function releaseLock($name) {
+    $pdo = getPDO();
+    $stmt = $pdo->prepare("UPDATE locks SET is_locked = FALSE WHERE name = :name");
+    return $stmt->execute(['name' => $name]);
+}
+
+
 
 
 
